@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Neon Siege - Gra Przegladarkowa</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<main class="app-shell">
+		<section id="startScreen" class="panel visible">
+			<h1>Neon Siege</h1>
+			<p class="subtitle">Arena survival z poziomami, ulepszeniami i boss wave.</p>
+			<ul class="controls-list">
+				<li>Ruch: WASD lub strzalki</li>
+				<li>Celowanie: myszka</li>
+				<li>Strzal: lewy przycisk myszy</li>
+				<li>Dash: Shift</li>
+				<li>Pauza: Esc</li>
+			</ul>
+			<button id="startBtn" class="btn btn-primary">Start Gry</button>
+		</section>
+
+		<section id="gameWrap" class="game-wrap">
+			<canvas id="gameCanvas" width="960" height="600"></canvas>
+			<div class="signature">Wiktoria Jagiełło 3D LO8</div>
+
+			<div id="hud" class="hud">
+				<div class="hud-item"><span>HP</span><strong id="hpValue">100</strong></div>
+				<div class="hud-item"><span>Tarcza</span><strong id="shieldValue">0</strong></div>
+				<div class="hud-item"><span>Punkty</span><strong id="scoreValue">0</strong></div>
+				<div class="hud-item"><span>Stage</span><strong id="stageValue">1</strong></div>
+				<div class="hud-item"><span>Kill Goal</span><strong id="goalValue">0 / 0</strong></div>
+				<div class="hud-item"><span>Highscore</span><strong id="highScoreValue">0</strong></div>
+			</div>
+
+			<div id="centerMessage" class="center-message hidden"></div>
+		</section>
+
+		<section id="upgradeOverlay" class="panel overlay hidden">
+			<h2>Wybierz ulepszenie</h2>
+			<p>Miedzy etapami mozesz wzmacniac postac.</p>
+			<div id="upgradeChoices" class="upgrade-grid"></div>
+		</section>
+
+		<section id="endScreen" class="panel hidden">
+			<h2 id="endTitle">Koniec gry</h2>
+			<p id="endSummary"></p>
+			<button id="restartBtn" class="btn btn-primary">Zagraj ponownie</button>
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
